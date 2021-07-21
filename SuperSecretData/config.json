@@ -1,5 +1,5 @@
 {
-    "token": "ODIxODI2MTY1MzA3MjExNzg2.YFJXQg.-QoOXfEw09X_1FTjzE1pmJ2qWR0",
+    "token": "",
     "prefix": "System Command",
     "mongoPath": "mongodb://localhost:27017/discordbot"
 }
