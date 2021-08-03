@@ -1,3 +1,5 @@
+/*
+
 const mongo = require('../mongo.js');
 const messageCountSchema = require('../Schemas/messageCountSchema')
 
@@ -27,3 +29,5 @@ module.exports = client => {
     })
 
 }
+
+*/

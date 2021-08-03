@@ -6,8 +6,8 @@ const fs = require('fs');
 
 //Initialize the data files
 const config = require('./SuperSecretData/config.json');
-const mongo = require('./mongo')
-const messageCount = require('./UserStats/messageCounter');
+//const mongo = require('./mongo')
+//const messageCount = require('./UserStats/messageCounter');
 const nonoWords = require('./SuperSecretData/nonoWords.json');
 
 //Initialize the discord client
@@ -38,15 +38,15 @@ client.login(config.token);
 
 client.on('ready', async () => {
 
-    await mongo().then(mongoose => {
-        try {
-            console.log("Connected to Mongo!");
-        } finally {
-            mongoose.connection.close();
-        }
-    });
+    //await mongo().then(mongoose => {
+    //try {
+    //console.log("Connected to Mongo!");
+    //} finally {
+    //mongoose.connection.close();
+    //}
+    //});
 
-    messageCount(client);
+    //messageCount(client);
 
     client.user.setStatus('online');
     client.user.setPresence({
@@ -61,22 +61,31 @@ client.on('ready', async () => {
     * Pomodoro Timer
     **************************************************/
 
-    /*
-    
     //Find pomodoro Channel
-    let pomChannel = client.channels.cache.get('864247024328114197');
+    let pomChannel = client.channels.cache.get('870013984030490745');
 
     const pomInterval = setInterval(() => {
 
-        pomChannel.send(`<@&864250021994430506> Study Time! Hit the books for 50 minutes!`);
+        pomChannel.send(`<@&870014013818429570> Study Time! Hit the books for 25 minutes!`);
 
         setTimeout(() => {
-            pomChannel.send(`<@&864250021994430506> Break Time! Enjoy yourself for 10 minutes!`);
-        }, 3000000); //50 minutes
+            pomChannel.send(`<@&870014013818429570> Break Time! Enjoy yourself for 5 minutes!`);
+        }, 1500000); //25 minutes
 
-    }, 3600000); //60 minutes
-    
-    */
+    }, 1800000); //30 minutes
+
+    /**************************************************
+    * Disboard Bump Reminder
+    **************************************************/
+
+    //Bot commands
+    let bumpChannel = client.channels.cache.get('724868663131242496');
+
+    const bumpInterval = setInterval(() => {
+
+        bumpChannel.send(`Just a friendly reminder to support the server! Simply type the command \`!d bump\`.`);
+
+    }, 7200000); //2 hours
 
 });
 

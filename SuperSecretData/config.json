@@ -1,5 +1,6 @@
 {
-    "token": "",
-    "prefix": "System Command",
-    "mongoPath": "mongodb://localhost:27017/discordbot"
+    "token": "ODY5MjcyMDA5NTIyMTc2MDgw.YP7ypQ.rXLksjB5004aufcvmQRinOMVYXM",
+    "prefix": "s-",
+    "mongoPath": "mongodb://localhost:27017/discordbot",
+    "tenorKey": "3U40NHAD8SXG"
 }

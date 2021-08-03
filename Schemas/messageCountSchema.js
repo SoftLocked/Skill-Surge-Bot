@@ -1,3 +1,5 @@
+/*
+
 const mongoose = require('mongoose');
 
 const messageCountSchema = mongoose.Schema({
@@ -20,3 +22,5 @@ const messageCountSchema = mongoose.Schema({
 });
 
 module.exports = mongoose.model('messageCounts', messageCountSchema)
+
+*/
