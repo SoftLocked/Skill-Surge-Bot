@@ -2,12 +2,12 @@ const Discord = require('discord.js');
 const { prefix } = require('../../SuperSecretData/config.json');
 module.exports.run = async (client, message, args) => {
 
-var roasts = [
+let roasts = [
   "If everyone were cookies, you'd be oatmeal raisin",
   "Placeholder 2"
 ];
 //The different types of roasts
-var roast = roasts[Math.floor(Math.random() * roasts.length)];
+let roast = roasts[Math.floor(Math.random() * roasts.length)];
  //I'm assuming this means that it choses one out of these choices, got the format from https://www.codegrepper.com/code-examples/javascript/select+random+object+from+array+javascript
   message.channel.send(`${roast}.`);
   //And this sends it out    
