@@ -18,7 +18,7 @@ module.exports.help = {
     name: 'roast',
     aliases: ['command'],
     description: 'Roasts the user medium rare',
-    usage: `${prefix}<Command> <Usage>`,
+    usage: `${prefix}<roast> <@user>`,
     cooldown: 1,
     args: false, 
     legacy: false,
