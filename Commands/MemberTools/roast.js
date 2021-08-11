@@ -13,7 +13,7 @@ var roast = roasts[Math.floor(Math.random() * roasts.length)];
   //And this sends it out    
 module.exports.help = {
     name: 'roast',
-    aliases: ['command'],
+    aliases: ['insult'],
     description: 'Roasts the user medium rare',
     usage: `${prefix}<roast> <user:OPTIONAL>`,
     cooldown: 1,
