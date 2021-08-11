@@ -9,7 +9,7 @@ var myArray = [
 
 var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
  //I'm assuming this means that it choses one out of these choices
-  message.channel.send(`${randomItem= myArray()}.`);
+  message.channel.send(`${randomItem}.`);
   //And this sends it out    
 module.exports.help = {
     name: 'roast',
