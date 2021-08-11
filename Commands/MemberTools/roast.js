@@ -2,14 +2,14 @@ const Discord = require('discord.js');
 const { prefix } = require('../../SuperSecretData/config.json');
 module.exports.run = async (client, message, args) => {
 
-var myArray = [
+var roasts = [
   "If everyone were cookies, you'd be oatmeal raisin",
   "Placeholder 2"
 ];
 
-var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+var roast = roasts[Math.floor(Math.random() * roasts.length)];
  //I'm assuming this means that it choses one out of these choices
-  message.channel.send(`${randomItem}.`);
+  message.channel.send(`${roasts}.`);
   //And this sends it out    
 module.exports.help = {
     name: 'roast',
