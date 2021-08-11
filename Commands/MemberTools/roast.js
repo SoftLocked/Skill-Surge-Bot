@@ -4,7 +4,7 @@ module.exports.run = async (client, message, args) => {
 
 let roasts = [
   "If everyone were cookies, ${message.mentions.members.first().username} would be the stale six month old oatmeal raisin on the back shelf",
-  "I'm using ${message.mentions.members.first().username.username} as a placeholder because that's all they can do"
+  "I'm using ${message.mentions.members.first().username} as a placeholder because that's all they can do"
   "if there was a laziness contest, ${message.mentions.members.first().username} wouldn't even get a rank because they can't be bothered to get off their couch"
 ];
 //The different types of roasts
