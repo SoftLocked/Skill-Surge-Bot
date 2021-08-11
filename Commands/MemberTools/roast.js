@@ -9,7 +9,7 @@ var roasts = [
 
 var roast = roasts[Math.floor(Math.random() * roasts.length)];
  //I'm assuming this means that it choses one out of these choices
-  message.channel.send(`${roasts}.`);
+  message.channel.send(`${roast}.`);
   //And this sends it out    
 module.exports.help = {
     name: 'roast',
