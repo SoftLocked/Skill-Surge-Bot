@@ -6,19 +6,15 @@ var myArray = [
   "If everyone were cookies, you'd be oatmeal raisin",
   "Placeholder 2"];
 
-var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
 
-  const embed = new Discord.MessageEmbed()
-   .setColor('7BC3EF')
-  
- 
-  if(!args[0]) return message.channel.send('randomItem=myArray')
-
+    if (args[0] === '<@!' + message.mentions.members.first().id + '>') {
+   try { message.channel.send(`${randomItem= myArray()}.`);
+       }
 module.exports.help = {
     name: 'roast',
     aliases: ['command'],
     description: 'Roasts the user medium rare',
-    usage: `${prefix}<roast> <@user>`,
+    usage: `${prefix}<roast> <user:OPTIONAL>`,
     cooldown: 1,
     args: false, 
     legacy: false,
