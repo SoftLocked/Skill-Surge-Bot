@@ -4,12 +4,13 @@ module.exports.run = async (client, message, args) => {
 
 var myArray = [
   "If everyone were cookies, you'd be oatmeal raisin",
-  "Placeholder 2"];
+  "Placeholder 2"
+];
 
-
-    if (args[0] === '<@!' + message.mentions.members.first().id + '>') {
-   try { message.channel.send(`${randomItem= myArray()}.`);
-       }
+var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+ //I'm assuming this means that it choses one out of these choices
+  message.channel.send(`${randomItem= myArray()}.`);
+  //And this sends it out    
 module.exports.help = {
     name: 'roast',
     aliases: ['command'],
