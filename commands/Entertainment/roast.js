@@ -26,4 +26,4 @@ module.exports.help = {
     args: true, 
     legacy: false,
 }
-//I SAID, DON'T FORGET THE CURLY BRACKETS DAMMIT
+//I SAID, DON'T FORGET THE CURLY BRACKETS DAMMIT 
