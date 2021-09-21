@@ -19,13 +19,11 @@ module.exports.run = async (client, message, args) => {
         "Better not tell you now",
         "Cannot predict now",
         "Concentrate and ask again",
-        "Mayhaps",
         "Don't count on it",
         "My reply is no",
         "My sources say no",
         "Outlook not so good",
-        "Very doubtful",
-        "definitely not"
+        "Very doubtful"
     ];
 
     let odds = Math.floor(Math.random() * responses.length);

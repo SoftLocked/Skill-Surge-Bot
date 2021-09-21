@@ -11,7 +11,7 @@ const config = require('./SuperSecretData/config.json');
 const nonoWords = require('./SuperSecretData/nonoWords.json');
 
 //Initialize the discord client
-global.client = new Discord.Client();
+global.client = new Discord.Client({ disableMentions: 'everyone' });
 
 //Initialize command and cooldown collections
 client.commands = new Discord.Collection();
@@ -74,19 +74,6 @@ client.on('ready', async () => {
 
     }, 1800000); //30 minutes
 
-    /**************************************************
-    * Disboard Bump Reminder
-    **************************************************/
-
-    //Bot commands
-    let bumpChannel = client.channels.cache.get('724868663131242496');
-
-    const bumpInterval = setInterval(() => {
-
-        bumpChannel.send(`Just a friendly reminder to support the server! Simply type the command \`!d bump\`.`);
-
-    }, 7200000); //2 hours
-
 });
 
 
@@ -101,12 +88,28 @@ client.on('message', message => {
     //autoMod(message);
 
     /**************************************************
+        * Disboard Bump Reminder
+        **************************************************/
+
+    //Bot commands
+    let bumpChannel = client.channels.cache.get('738978328358158436');
+
+    if (message.content == "!d bump" && message.channel == bumpChannel) {
+
+        bumpChannel.send(`Thanks for supporting the server!`);
+
+        const bumpInterval = setTimeout(() => {
+
+            bumpChannel.send(`Bump cooldown is over! Type the command \`!d bump\` to bump again.`);
+
+        }, 7200000); //2 hours
+    }
+
+    /**************************************************
      * Command Infrastructure
     **************************************************/
 
     if (!message.content.startsWith(config.prefix)) return;
-
-
 
     const args = message.content.slice(config.prefix.length).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
