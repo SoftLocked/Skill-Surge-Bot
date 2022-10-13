@@ -1,6 +1,6 @@
 {
     "token": "",
     "prefix": "s-",
-    "mongoPath": "mongodb://localhost:27017/discordbot",
-    "tenorKey": "3U40NHAD8SXG"
+    "mongoPath": "",
+    "tenorKey": ""
 }
